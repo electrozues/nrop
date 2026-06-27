@@ -29,11 +29,13 @@ async def wordle(interaction: discord.Interaction):
                     )
                 else:
                     await interaction.response.send_message(
-                        "❌ Failed to fetch today's Wordle answer.", ephemeral=True
+                        "Failed to fetch today's Wordle answer.",
+                        ephemeral=True
                     )
     except Exception as e:
         await interaction.response.send_message(
-            f"❌ Error: {str(e)}", ephemeral=True
+            f"Error: {str(e)}",
+            ephemeral=True
         )
 
 
